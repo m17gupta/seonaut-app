@@ -134,7 +134,7 @@ func (h *apiHandler) createProjectAPIHandler(w http.ResponseWriter, r *http.Requ
 }
 
 func (h *apiHandler) getProjectAPIHandler(w http.ResponseWriter, r *http.Request) {
-	projectID, err := h.getProjectIDFr omURL(r)
+	projectID, err := h.getProjectIDFromURL(r)
 	if err != nil {
 		h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
 			Success: false,
