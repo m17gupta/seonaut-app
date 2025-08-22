@@ -1,0 +1,14 @@
+[server]
+host = "0.0.0.0"
+port = 3000
+url = "http://localhost:3000"
+
+[database]
+server = "srv500.hstgr.io"
+port = 3306
+user = "u683660902_seonaut"
+password = "105MohanNagar"
+database = "u683660902_seonaut"
+
+[crawler]
+agent = "Mozilla/5.0 (compatible; SEOnautBot/1.0; +https://seonaut.org/bot)"

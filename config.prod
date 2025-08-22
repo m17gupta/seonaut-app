@@ -1,0 +1,15 @@
+[server]
+host = "0.0.0.0"
+port = 10000
+url = "${SEONAUT_SERVER_URL}"
+frontend_url = "https://codified-seo.vercel.app"
+
+[database]
+server = "${SEONAUT_DATABASE_SERVER}"
+port = 3306
+user = "${SEONAUT_DATABASE_USER}"
+password = "${SEONAUT_DATABASE_PASSWORD}"
+database = "${SEONAUT_DATABASE_DATABASE}"
+
+[crawler]
+agent = "Mozilla/5.0 (compatible; SEOnautBot/1.0; +https://seonaut.org/bot)"

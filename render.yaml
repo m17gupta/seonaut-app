@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: seonaut-web
+    env: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        fromDatabase:
+          name: seonaut-db
+          property: connectionString
+      - key: SEONAUT_SERVER_URL
+        value: https://seonaut-web.onrender.com
+      - key: SEONAUT_DATABASE_SERVER
+        value: srv500.hstgr.io
+      - key: SEONAUT_DATABASE_USER
+        value: u683660902_seonaut
+      - key: SEONAUT_DATABASE_PASSWORD
+        value: 105MohanNagar
+      - key: SEONAUT_DATABASE_DATABASE
+        value: u683660902_seonaut
+      - key: SEONAUT_FRONTEND_URL
+        value: https://codified-seo.vercel.app
+      - key: SEONAUT_ALLOWED_ORIGINS
+        value: https://codified-seo.vercel.app,http://localhost:3000,http://localhost:3001,http://localhost:5173
+    autoDeploy: true
+    healthCheckPath: /health
+    numInstances: 1
+
+databases:
+  - name: seonaut-db
+    databaseName: u683660902_seonaut
+    user: u683660902_seonaut
+    password: 105MohanNagar
