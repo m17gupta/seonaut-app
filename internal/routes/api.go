@@ -134,7 +134,7 @@ func (h *apiHandler) createProjectAPIHandler(w http.ResponseWriter, r *http.Requ
 }
 
 func (h *apiHandler) getProjectAPIHandler(w http.ResponseWriter, r *http.Request) {
-	projectID, err := h.getProjectIDFromURL(r)
+	projectID, err := h.getProjectIDFr omURL(r)
 	if err != nil {
 		h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
 			Success: false,
@@ -151,14 +151,14 @@ func (h *apiHandler) getProjectAPIHandler(w http.ResponseWriter, r *http.Request
 }
 
 func (h *apiHandler) updateProjectAPIHandler(w http.ResponseWriter, r *http.Request) {
-	projectID, err := h.getProjectIDFromURL(r)
-	if err != nil {
-		h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
-			Success: false,
-			Error:   "Invalid project ID",
-		})
-		return
-	}
+       _, err := h.getProjectIDFromURL(r)
+       if err != nil {
+	       h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
+		       Success: false,
+		       Error:   "Invalid project ID",
+	       })
+	       return
+       }
 	
 	// TODO: Implement update project logic using projectID
 	h.sendJSONResponse(w, http.StatusNotImplemented, APIResponse{
@@ -168,14 +168,14 @@ func (h *apiHandler) updateProjectAPIHandler(w http.ResponseWriter, r *http.Requ
 }
 
 func (h *apiHandler) deleteProjectAPIHandler(w http.ResponseWriter, r *http.Request) {
-	projectID, err := h.getProjectIDFromURL(r)
-	if err != nil {
-		h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
-			Success: false,
-			Error:   "Invalid project ID",
-		})
-		return
-	}
+       _, err := h.getProjectIDFromURL(r)
+       if err != nil {
+	       h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
+		       Success: false,
+		       Error:   "Invalid project ID",
+	       })
+	       return
+       }
 	
 	// TODO: Implement delete project logic using projectID
 	h.sendJSONResponse(w, http.StatusNotImplemented, APIResponse{
@@ -186,14 +186,14 @@ func (h *apiHandler) deleteProjectAPIHandler(w http.ResponseWriter, r *http.Requ
 
 // Crawl API handlers
 func (h *apiHandler) startCrawlAPIHandler(w http.ResponseWriter, r *http.Request) {
-	projectID, err := h.getProjectIDFromURL(r)
-	if err != nil {
-		h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
-			Success: false,
-			Error:   "Invalid project ID",
-		})
-		return
-	}
+       _, err := h.getProjectIDFromURL(r)
+       if err != nil {
+	       h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
+		       Success: false,
+		       Error:   "Invalid project ID",
+	       })
+	       return
+       }
 	
 	// TODO: Implement start crawl logic using projectID
 	h.sendJSONResponse(w, http.StatusNotImplemented, APIResponse{
@@ -203,14 +203,14 @@ func (h *apiHandler) startCrawlAPIHandler(w http.ResponseWriter, r *http.Request
 }
 
 func (h *apiHandler) stopCrawlAPIHandler(w http.ResponseWriter, r *http.Request) {
-	projectID, err := h.getProjectIDFromURL(r)
-	if err != nil {
-		h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
-			Success: false,
-			Error:   "Invalid project ID",
-		})
-		return
-	}
+       _, err := h.getProjectIDFromURL(r)
+       if err != nil {
+	       h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
+		       Success: false,
+		       Error:   "Invalid project ID",
+	       })
+	       return
+       }
 	
 	// TODO: Implement stop crawl logic using projectID
 	h.sendJSONResponse(w, http.StatusNotImplemented, APIResponse{
@@ -220,14 +220,14 @@ func (h *apiHandler) stopCrawlAPIHandler(w http.ResponseWriter, r *http.Request)
 }
 
 func (h *apiHandler) getCrawlStatusAPIHandler(w http.ResponseWriter, r *http.Request) {
-	projectID, err := h.getProjectIDFromURL(r)
-	if err != nil {
-		h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
-			Success: false,
-			Error:   "Invalid project ID",
-		})
-		return
-	}
+       _, err := h.getProjectIDFromURL(r)
+       if err != nil {
+	       h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
+		       Success: false,
+		       Error:   "Invalid project ID",
+	       })
+	       return
+       }
 	
 	// TODO: Implement get crawl status logic using projectID
 	h.sendJSONResponse(w, http.StatusNotImplemented, APIResponse{
@@ -238,14 +238,14 @@ func (h *apiHandler) getCrawlStatusAPIHandler(w http.ResponseWriter, r *http.Req
 
 // Issues API handlers
 func (h *apiHandler) getIssuesAPIHandler(w http.ResponseWriter, r *http.Request) {
-	projectID, err := h.getProjectIDFromURL(r)
-	if err != nil {
-		h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
-			Success: false,
-			Error:   "Invalid project ID",
-		})
-		return
-	}
+       _, err := h.getProjectIDFromURL(r)
+       if err != nil {
+	       h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
+		       Success: false,
+		       Error:   "Invalid project ID",
+	       })
+	       return
+       }
 	
 	// TODO: Implement get issues logic using projectID
 	h.sendJSONResponse(w, http.StatusNotImplemented, APIResponse{
@@ -255,14 +255,14 @@ func (h *apiHandler) getIssuesAPIHandler(w http.ResponseWriter, r *http.Request)
 }
 
 func (h *apiHandler) getIssueAPIHandler(w http.ResponseWriter, r *http.Request) {
-	projectID, err := h.getProjectIDFromURL(r)
-	if err != nil {
-		h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
-			Success: false,
-			Error:   "Invalid project ID",
-		})
-		return
-	}
+       _, err := h.getProjectIDFromURL(r)
+       if err != nil {
+	       h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
+		       Success: false,
+		       Error:   "Invalid project ID",
+	       })
+	       return
+       }
 	
 	// TODO: Implement get specific issue logic using projectID and issue_id
 	h.sendJSONResponse(w, http.StatusNotImplemented, APIResponse{
@@ -273,14 +273,14 @@ func (h *apiHandler) getIssueAPIHandler(w http.ResponseWriter, r *http.Request) 
 
 // Dashboard API handlers
 func (h *apiHandler) getDashboardDataAPIHandler(w http.ResponseWriter, r *http.Request) {
-	projectID, err := h.getProjectIDFromURL(r)
-	if err != nil {
-		h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
-			Success: false,
-			Error:   "Invalid project ID",
-		})
-		return
-	}
+       _, err := h.getProjectIDFromURL(r)
+       if err != nil {
+	       h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
+		       Success: false,
+		       Error:   "Invalid project ID",
+	       })
+	       return
+       }
 	
 	// TODO: Implement get dashboard data logic using projectID
 	h.sendJSONResponse(w, http.StatusNotImplemented, APIResponse{
@@ -290,14 +290,14 @@ func (h *apiHandler) getDashboardDataAPIHandler(w http.ResponseWriter, r *http.R
 }
 
 func (h *apiHandler) getPagesAPIHandler(w http.ResponseWriter, r *http.Request) {
-	projectID, err := h.getProjectIDFromURL(r)
-	if err != nil {
-		h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
-			Success: false,
-			Error:   "Invalid project ID",
-		})
-		return
-	}
+       _, err := h.getProjectIDFromURL(r)
+       if err != nil {
+	       h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
+		       Success: false,
+		       Error:   "Invalid project ID",
+	       })
+	       return
+       }
 	
 	// TODO: Implement get pages logic using projectID
 	h.sendJSONResponse(w, http.StatusNotImplemented, APIResponse{
@@ -308,14 +308,14 @@ func (h *apiHandler) getPagesAPIHandler(w http.ResponseWriter, r *http.Request) 
 
 // Export API handlers
 func (h *apiHandler) exportCSVAPIHandler(w http.ResponseWriter, r *http.Request) {
-	projectID, err := h.getProjectIDFromURL(r)
-	if err != nil {
-		h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
-			Success: false,
-			Error:   "Invalid project ID",
-		})
-		return
-	}
+       _, err := h.getProjectIDFromURL(r)
+       if err != nil {
+	       h.sendJSONResponse(w, http.StatusBadRequest, APIResponse{
+		       Success: false,
+		       Error:   "Invalid project ID",
+	       })
+	       return
+       }
 	
 	// TODO: Implement CSV export logic using projectID
 	h.sendJSONResponse(w, http.StatusNotImplemented, APIResponse{
